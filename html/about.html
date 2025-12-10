@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании WEG</title>
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+     <!-- ==================== HEADER ==================== -->
+     <header class="header">
+        <nav class="navbar">
+            <a href="main.html" class="logo">
+                <img src="../img/лого-вег.png" alt="WEG Logo" class="logo-img">
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="kg">KG</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+    </header>
+    <section class="about" id="about">
+        <header class="about__header">
+            <h2 class="about__title">О компании WEG</h2>
+        </header>
+
+        <!-- Intro -->
+        <div class="about__intro">
+            <p>
+                <strong>WEG</strong> — надёжная компания, специализирующаяся на легальном трудоустройстве 
+                граждан Кыргызской Республики в Германии. Мы ценим доверие наших кандидатов 
+                и бережно относимся к своей репутации, предоставляя только официальные 
+                и проверенные возможности.
+            </p>
+            <p>
+                Мы работаем на основании государственной лицензии и в сотрудничестве 
+                с немецкими партнёрами, что позволяет нам обеспечивать прозрачный, 
+                безопасный и полностью законный процесс трудоустройства.
+            </p>
+        </div>
+
+        <!-- Section 1: Our Approach -->
+        <div class="about-section">
+            <div class="section-content">
+                <div class="section-text">
+                    <h3>Наш подход</h3>
+                    <div class="section-preview">
+                        <p>
+                            Преимуществом WEG является индивидуальная работа с каждым кандидатом. 
+                            Мы подбираем вакансию с учётом вашего возраста, опыта, навыков и уровня языка.
+                        </p>
+                    </div>
+                    
+                    <div class="section-details" id="approach-details">
+                        <p>
+                            Мы сопровождаем кандидатов на всех этапах — от момента выбора профессии 
+                            до выхода на рабочее место в Германии. Наша команда состоит из опытных 
+                            специалистов, которые знают все тонкости немецкого рынка труда.
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Этапы нашей работы:</strong>
+                            <ul>
+                                <li>Первичная консультация и оценка квалификации</li>
+                                <li>Подбор подходящих вакансий</li>
+                                <li>Помощь в подготовке резюме и мотивационного письма</li>
+                                <li>Организация собеседований с работодателями</li>
+                                <li>Подготовка пакета документов для визы</li>
+                                <li>Консультации по визовым процедурам</li>
+                                <li>Помощь в поиске жилья в Германии</li>
+                                <li>Поддержка в период адаптации</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            Мы помогаем вам правильно подготовить документы, ориентируем по требованиям 
+                            работодателя, консультируем по визовым процедурам и адаптации в Германии. 
+                            Наша задача — сделать ваш путь к работе в Германии максимально понятным, 
+                            структурированным и надёжным.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number">98%</div>
+                                <div class="stat-label">Успешных визовых заявок</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Трудоустроенных кандидатов</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Лет опыта работы</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('approach-details', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="section-image">
+                    <img src="../img/content/Изображение WhatsApp 2025-12-10 в 14.21.04_e0c0a21a.jpg" alt="Team meeting">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Where Our Candidates Work -->
+        <div class="about-section">
+            <div class="section-content reverse">
+                <div class="section-text">
+                    <h3>Где работают наши кандидаты</h3>
+                    <div class="section-preview">
+                        <p>
+                            Сегодня наши сотрудники успешно трудятся в Германии в различных сферах. 
+                            Мы сотрудничаем с проверенными работодателями по всей стране.
+                        </p>
+                    </div>
+                    
+                    <div class="section-details" id="industries-details">
+                        <p>
+                            Германия предлагает широкие возможности для трудоустройства в самых 
+                            востребованных отраслях экономики. Мы помогаем найти работу как 
+                            квалифицированным специалистам, так и тем, кто только начинает 
+                            свою карьеру.
+                        </p>
+
+                        <div class="industries-grid">
+                            <div class="industry-card">
+                                <div class="industry-icon">🏨</div>
+                                <h4>Гостиничный бизнес</h4>
+                                <p>Отели, хостелы, курорты по всей Германии</p>
+                            </div>
+                            <div class="industry-card">
+                                <div class="industry-icon">🍽️</div>
+                                <h4>Рестораны и кухни</h4>
+                                <p>От небольших кафе до ресторанов высокой кухни</p>
+                            </div>
+                            <div class="industry-card">
+                                <div class="industry-icon">📦</div>
+                                <h4>Логистика и склады</h4>
+                                <p>Amazon, DHL и другие крупные компании</p>
+                            </div>
+                            <div class="industry-card">
+                                <div class="industry-icon">🌾</div>
+                                <h4>Сельское хозяйство</h4>
+                                <p>Фермы, виноградники, сезонные программы</p>
+                            </div>
+                            <div class="industry-card">
+                                <div class="industry-icon">🏭</div>
+                                <h4>Производство</h4>
+                                <p>Автомобильная промышленность, заводы</p>
+                            </div>
+                            <div class="industry-card">
+                                <div class="industry-icon">👨‍⚕️</div>
+                                <h4>Уход и поддержка</h4>
+                                <p>Дома престарелых, медицинские учреждения</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box">
+                            <strong>Наша поддержка на месте:</strong>
+                            <ul>
+                                <li>Помощь в аренде жилья или общежития</li>
+                                <li>Открытие банковского счёта</li>
+                                <li>Регистрация по месту жительства</li>
+                                <li>Консультации по налогообложению</li>
+                                <li>Курсы немецкого языка</li>
+                                <li>24/7 поддержка на русском языке</li>
+                            </ul>
+                        </div>
+
+                        <p>
+                            Мы также помогаем организовать приезд, жильё и адаптацию на месте — 
+                            чтобы старт был комфортным. Многие наши кандидаты продлевают контракты 
+                            и строят успешную карьеру в Германии.
+                        </p>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('industries-details', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="section-image">
+                    <img src="../img/content/IMG_4645.JPG" alt="Working in Germany">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Why Choose Us -->
+        <div class="about-section">
+            <div class="section-content">
+                <div class="section-text">
+                    <h3>Почему выбирают нас</h3>
+                    <div class="section-preview">
+                        <p>
+                            Наша репутация построена на честности, профессионализме и реальных 
+                            результатах. Мы не обещаем невозможного — мы делаем всё возможное.
+                        </p>
+                    </div>
+                    
+                    <div class="section-details" id="benefits-details">
+                        <div class="highlight-box">
+                            <strong>Наши преимущества:</strong>
+                            <ul>
+                                <li>Официальная государственная лицензия</li>
+                                <li>Прямые контакты с немецкими работодателями</li>
+                                <li>Прозрачные условия — никаких скрытых платежей</li>
+                                <li>Оплата только после получения визы</li>
+                                <li>Юридическое сопровождение на всех этапах</li>
+                                <li>Гарантия возврата средств при отказе в визе по нашей вине</li>
+                            </ul>
+                        </div>
+
+                        <p><strong>Что говорят наши клиенты:</strong></p>
+                        <p>
+                            "Благодаря WEG я получил работу в отеле в Мюнхене. Весь процесс был 
+                            прозрачным, меня сопровождали на каждом этапе. Сейчас уже полгода 
+                            работаю и очень доволен!" — <em>Азамат, 24 года</em>
+                        </p>
+                        <p>
+                            "Я прошла программу Ausbildung как повар. Компания помогла с документами, 
+                            визой и даже нашла жильё. Теперь учусь и получаю зарплату!" — 
+                            <em>Айгерим, 22 года</em>
+                        </p>
+
+                        <div class="highlight-box">
+                            <strong>Наши гарантии:</strong>
+                            <p>Мы работаем только с проверенными работодателями, которые соблюдают 
+                            все требования немецкого трудового законодательства. Все контракты 
+                            официальные, с соблюдением минимальной заработной платы и социальных 
+                            гарантий.</p>
+                        </div>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('benefits-details', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="section-image">
+                    <img src="../img/content/IMG_4644.JPG" alt="Success stories">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+<section class="team-section">
+    <div class="team-container">
+        <header class="team-header">
+            <h2 class="team-title">Наша команда</h2>
+            <p class="team-subtitle">Профессионалы, которые помогут вам достичь цели</p>
+        </header>
+
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-photo">
+                        
+                        <!-- Вариант 2: Если у вас есть свое фото, замените на: -->
+                        <img src="../img/team/директор.jpg" alt="director">
+                        
+                    
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Жанаргул </h3>
+                        <p class="team-position">Генеральный директор</p>
+                        <p class="team-description">
+                            Эксперт в области международного трудоустройства с 8-летним опытом работы
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-photo">
+                        <img src="../img/team/менеджер.jpg" alt="manager">
+                        
+                    
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Айжан Ибраева</h3>
+                        <p class="team-position">менеджер</p>
+                        <p class="team-description">
+                            Специалист по подбору персонала и консультированию кандидатов
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-photo">
+                        <img src="../img/team/менеджер2.jpg" alt="manager">                        
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Нурсултан Назиров</h3>
+                        <p class="team-position">менеджер</p>
+                        <p class="team-description">
+                            Специалист по визовым вопросам и международному трудовому праву
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-photo">
+                        <img src="../img/team/менеджер3.jpg" alt="manager">                        
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Аселя Назирова</h3>
+                        <p class="team-position">менеджер</p>
+                        <p class="team-description">
+                            Специалист по визовым вопросам и международному трудовому праву
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-photo">
+                        <img src="../img/team/менеджер.jpg" alt="manager">
+                        
+                    
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Айжан Ибраева</h3>
+                        <p class="team-position">менеджер</p>
+                        <p class="team-description">
+                            Специалист по подбору персонала и консультированию кандидатов
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- License Section -->
+    <section class="license-section">
+        <h2>Наша лицензия</h2>
+        <h3>ОсОО РОСТ ГРУПП</h3>
+        <p class="license-subtitle">
+            WEG работает официально на основании государственной лицензии
+        </p>
+
+        <div class="license-details">
+            <div class="license-item">
+                <span class="label">Разрешение №</span>
+                <span class="value">001550</span>
+            </div>
+
+            <div class="license-item">
+                <span class="label">Выдано</span>
+                <span class="value">
+                    <time datetime="2025-04-22">22 апреля 2025 г.</time>
+                </span>
+            </div>
+
+            <div class="license-item">
+                <span class="label">Действительно до</span>
+                <span class="value">
+                    <time datetime="2028-04-16">16 апреля 2028 г.</time>
+                </span>
+            </div>
+
+            <div class="license-item">
+                <span class="label">Страна трудоустройства</span>
+                <span class="value">Федеративная Республика Германия</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Контактная информация -->
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <p>г. Бишкек, ул. Бакаева 140/3<br>Главный офис</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <a href="tel:+996995660505">+996 995 660 505</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="bewerberweg@gmail.com">bewerberweg@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Рабочие часы -->
+            <div class="footer-section">
+                <h3>Режим работы</h3>
+                <p>Понедельник - Пятница:<br>10:00 - 18:00</p>
+                <p>Суббота:<br>Выходной</p>
+                <p>Воскресенье:<br>Выходной</p>
+            </div>
+
+            <!-- Быстрые ссылки -->
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <a href="main.html">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+
+            <!-- Социальные сети -->
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/weg.kg/" target="_blank">
+                        <img src="../img/icons8-instagram-48.png" class="social-link" title="Instagram">
+                    </a>
+                
+                    <a href="https://wa.me/+996706660588" target="_blank">
+                        <img src="../img/icons8-whatsapp-48.png" class="social-link" title="WhatsApp">
+                    </a>
+                </div>
+                
+                <!-- Карта -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1390.649975307108!2d74.57691042369196!3d42.82892499765868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDQ5JzQ0LjEiTiA3NMKwMzQnMzkuNSJF!5e1!3m2!1sru!2skg!4v1765343163357!5m2!1sru!2skg" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe> 
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 WEG. Все права защищены. Лицензия №001550</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(detailsId, button) {
+            const details = document.getElementById(detailsId);
+            
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+                button.textContent = 'Подробнее';
+            } else {
+                details.classList.add('active');
+                button.textContent = 'Скрыть';
+                
+                setTimeout(() => {
+                    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+    </script>
+
+<script>
+    // Page navigation
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active');
+        
+        // Close mobile menu if open
+        const navMenu = document.getElementById('navMenu');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        navMenu.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Language switcher
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const lang = btn.dataset.lang;
+            console.log('Language switched to:', lang);
+            // Здесь можно добавить логику смены языка
+        });
+    });
+</script>
+</body>
+</html>

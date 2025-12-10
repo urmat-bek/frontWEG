@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEG - Трудоустройство в Германии</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="main.html" class="logo">
+                <img src="../img/лого-вег.png" alt="WEG Logo" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+              <li><a onclick="showPage('home')">Главная</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+              <li>
+                  <div class="language-switcher">
+                      <button class="lang-btn active" data-lang="ru">RU</button>
+                      <button class="lang-btn" data-lang="kg">KG</button>
+                      <button class="lang-btn" data-lang="de">DE</button>
+                  </div>
+              </li>
+          </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+        <section class="hero">
+            <div class="hero-bg"></div>
+        
+            <div class="hero-content">
+                <h2>Твой путь в Германию вместе с нами!</h2>
+                <p>
+                    Официальное трудоустройство граждан Кыргызстана в Германии. 
+                    Мы работаем с государственной лицензией и проверенными работодателями.
+                </p>
+        
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="window.location.href='services.html#service-item'">
+                        Наши программы
+                    </button>
+        
+                    <button class="btn-secondary" onclick="window.location.href='contact.html#contact-item'">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Why WEG -->
+            <section class="section">
+                <h2 class="section-title">Почему WEG?</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-block">
+                            <div class="info-icon">
+                                <img src="../img/icons8-информация.gif" alt="check icon">
+                            </div>
+                            <h3>Официальная лицензия</h3>
+                            <p>Работаем на основании государственной лицензии №001550</p>
+                        </div>
+                        
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="../img/icons8-рукопожатие.gif" alt="check icon">
+                        </div>
+                        <h3>Проверенные работодатели</h3>
+                        <p>Сотрудничаем только с надежными немецкими компаниями</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="../img/icons8-briefcase.gif" alt="check icon">
+                        </div>
+                        <h3>Полное сопровождение</h3>
+                        <p>От подбора вакансии до адаптации в Германии</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <img src="../img/icons8-goal.gif" alt="check icon">
+                        </div>
+                        <h3>98% успеха</h3>
+                        <p>Высокий процент одобрения визовых заявок</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Preview -->
+            <section class="section">
+                <h2 class="section-title">Наши программы</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">🌞</div>
+                        <h3>FerienJob</h3>
+                        <p>Летняя работа для студентов. Заработок от €1,200/мес.</p>
+                        <!-- <button class="card-btn" onclick="showPage('services')">Подробнее</button> -->
+
+                        <button class="card-btn" onclick="window.location.href='services.html#service-item'">
+                          Подробнее
+                      </button>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">🎓</div>
+                        <h3>Ausbildung</h3>
+                        <p>Профессиональное обучение с зарплатой €800-1,300/мес.</p>
+                        <button class="card-btn" onclick="window.location.href='services.html#service-item'">Подробнее</button>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💼</div>
+                        <h3>Работа на 8 месяцев</h3>
+                        <p>Программа временной работы в Германии продолжительностью 8 месяцев. Отличная возможность получить опыт и заработать.</p>
+                        <button class="card-btn" onclick="window.location.href='services.html#service-item'">Подробнее</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Timeline -->
+            <section class="section">
+                <h2 class="section-title">Процесс трудоустройства</h2>
+                <div class="process-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Первичная консультация</h3>
+                            <p>Звонок или визит в офис. Обсуждаем ваши цели, опыт и подходящие программы.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Просмотр документов</h3>
+                            <p>Проверяем ваши документы, помогаем подготовить недостающие бумаги.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Собеседование</h3>
+                            <p>Организуем онлайн-интервью с работодателем. Помогаем подготовиться.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Оформление документов</h3>
+                            <p>Подготовка визового пакета, переводы, заполнение анкет.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Официальный ответ</h3>
+                            <p>Получение визы и контракта. Юридическое оформление.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">6</div>
+                        <div class="timeline-content">
+                            <h3>Вылет в Германию</h3>
+                            <p>Помощь с билетами, встреча в аэропорту, адаптация на месте.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Language Courses -->
+            <section class="section">
+                <h2 class="section-title">Языковые курсы</h2>
+                <p style="text-align: center; color: #555; max-width: 700px; margin: 0 auto 40px;">
+                    Мы предлагаем курсы немецкого языка для подготовки к работе и учебе в Германии
+                </p>
+                <div class="language-grid">
+                    <div class="language-card">
+                        <div class="language-level">A1</div>
+                        <h4>Начальный уровень</h4>
+                        <p>Базовые фразы, приветствия, простые диалоги. Для повседневного общения.</p>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-level">A2</div>
+                        <h4>Элементарный</h4>
+                        <p>Расширенный словарный запас, базовая грамматика. Подходит для FerienJob.</p>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-level">B1</div>
+                        <h4>Средний</h4>
+                        <p>Уверенное общение на бытовые темы. Необходим для Ausbildung.</p>
+                    </div>
+                    <div class="language-card">
+                        <div class="language-level">B2</div>
+                        <h4>Продвинутый</h4>
+                        <p>Свободное владение языком. Для профессиональной деятельности и учебы.</p>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="window.location.href = 'contact.html#contact-item'">Записаться на курс</button>
+            </section>
+
+            <!-- Reviews Preview -->
+            <section class="section">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">
+                            "Я прошла программу Ausbildung как повар. Компания помогла с документами, 
+                            визой и даже нашла жильё. Теперь учусь и получаю зарплату. Очень благодарна!"
+                        </p>
+                        <div class="review-author">
+                            <div class="review-avatar">Б</div>
+                            <div class="review-info">
+                                <h5>Айгерим Б.</h5>
+                                <p>Ausbildung, Берлин</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="window.location.href = 'reviews.html#reviews-grid'">Все отзывы</button>
+              
+            </section>
+        </main>
+    </div>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Контактная информация -->
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <p>г. Бишкек, ул. Бакаева 140/3 123<br>Офис 1</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <a href="tel:+996706660588">+996 706 660 588</a>
+                        <a href="tel:+996995660505">+996 995 660 505</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:bewerberweg@gmail.com">bewerberweg@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Рабочие часы -->
+            <div class="footer-section">
+                <h3>Режим работы</h3>
+                <p>Понедельник - Пятница:<br>9:00 - 18:00</p>
+                <p>Суббота:<br>10:00 - 15:00</p>
+                <p>Воскресенье:<br>Выходной</p>
+            </div>
+
+            <!-- Быстрые ссылки -->
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <a href="main.html">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+
+            <!-- Социальные сети -->
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/weg.kg/" target="_blank">
+                        <img src="../img/icons8-instagram-48.png" class="social-link" title="Instagram">
+                    </a>
+                
+                    <a href="https://wa.me/+996706660588" target="_blank">
+                        <img src="../img/icons8-whatsapp-48.png" class="social-link" title="WhatsApp">
+                    </a>
+                </div>
+                
+                
+                <!-- Карта -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1390.649975307108!2d74.57691042369196!3d42.82892499765868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDQ5JzQ0LjEiTiA3NMKwMzQnMzkuNSJF!5e1!3m2!1sru!2skg!4v1765343163357!5m2!1sru!2skg" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe> 
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 WEG. Все права защищены. Лицензия №001550</p>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            navMenu.classList.remove('active');
+            mobileMenuBtn.textContent = '☰';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Language switcher
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const lang = btn.dataset.lang;
+                console.log('Language switched to:', lang);
+                // Здесь можно добавить логику смены языка
+            });
+        });
+    </script>
+</body>

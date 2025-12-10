@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши услуги</title>
+    <link rel="stylesheet" href="../css/services.css">
+</head>
+<body>
+     <!-- ==================== HEADER ==================== -->
+     <header class="header">
+        <nav class="navbar">
+            <a href="main.html" class="logo">
+                <img src="../img/лого-вег.png" alt="WEG Logo" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li>
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="kg">KG</button>
+                        <button class="lang-btn" data-lang="de">DE</button>
+                    </div>
+                </li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </nav>
+    </header>
+
+    <section class="services" id="services">
+        <h2>Наши услуги</h2>
+
+        <!-- Service 1: FerienJob -->
+        <div class="service-item">
+            <div class="service-content">
+                <div class="service-text">
+                    <h3>FerienJob</h3>
+                    <div class="service-preview">
+                        <p>Программа временной занятости для студентов в период летних каникул. Отличная возможность заработать, получить опыт работы в Германии и улучшить знание немецкого языка.</p>
+                    </div>
+                    
+                    <div class="service-details" id="details1">
+                        <div class="highlight-box">
+                            <strong>Продолжительность:</strong>
+                            <p>2-3 месяца (июнь-сентябрь)</p>
+                        </div>
+
+                        <p><strong>Сферы работы:</strong></p>
+                        <ul>
+                            <li>Гостиницы и отели (официанты, горничные, помощники на кухне)</li>
+                            <li>Рестораны и кафе</li>
+                            <li>Сельское хозяйство (сбор урожая)</li>
+                            <li>Склады и логистика</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Заработок:</strong>
+                            <p>От €1,200 до €2,000 в месяц (в зависимости от работодателя и региона)</p>
+                        </div>
+
+                        <p><strong>Что входит в программу:</strong></p>
+                        <ul>
+                            <li>Официальное трудоустройство с контрактом</li>
+                            <li>Помощь в оформлении визы</li>
+                            <li>Проживание (часто предоставляется работодателем)</li>
+                            <li>Медицинская страховка</li>
+                        </ul>
+
+                        <p><strong>Требования:</strong> возраст 18-30 лет, статус студента, базовое знание немецкого или английского языка (A1-A2).</p>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('details1', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="service-image">
+                    <img src="../img/content/IMG_4643.JPG" alt="FerienJob students working">
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 4: 8 month -->
+        <div class="service-item">
+            <div class="service-content reverse">
+                <div class="service-text">
+                    <h3>Работа на 8 месяцев</h3>
+                    <div class="service-preview">
+                        <p>Программа временной работы в Германии продолжительностью 8 месяцев. Отличная возможность получить опыт и заработать.</p>
+                    </div>
+                    
+                    <div class="service-details" id="details4">
+                        <div class="highlight-box">
+                            <strong>Продолжительность:</strong>
+                            <p>8 месяцев (в зависимости от профессии)</p>
+                        </div>
+
+                        <p><strong>Популярные направления:</strong></p>
+                        <ul>
+                            <li>Гостиничное дело и туризм</li>
+                            <li>Повар / кондитер</li>
+                            <li>Медицинский уход (Pflegefachkraft)</li>
+                            <li>IT-специалист</li>
+                            <li>Механик / электрик</li>
+                            <li>Логистика</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Зарплата:</strong>
+                            <p>€800 - €1,300 в месяц</p>
+                        </div>
+
+                        <p><strong>Преимущества:</strong></p>
+                        <ul>
+                            <li>Официальная зарплата с первого месяца</li>
+                            <li>Жильё (предоставляется или компенсируется)</li>
+                            <li>Полная медицинская страховка</li>
+                            <li>Возможность остаться работать после окончания</li>
+                            <li>Признанный во всей Европе диплом</li>
+                        </ul>
+
+                        <p><strong>Требования:</strong> возраст 18-35 лет, уровень немецкого B1-B2, мотивация к обучению.</p>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('details4', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="service-image">
+                    <img src="../img/content/работа8мес.jpg" alt="Ausbildung training program">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Service 2: Ausbildung -->
+        <div class="service-item">
+            <div class="service-content">
+                <div class="service-text">
+                    <h3>Ausbildung</h3>
+                    <div class="service-preview">
+                        <p>Профессиональное обучение в Германии с трудоустройством. Уникальная возможность получить востребованную профессию, европейский диплом и стабильную работу.</p>
+                    </div>
+                    
+                    <div class="service-details" id="details2">
+                        <div class="highlight-box">
+                            <strong>Продолжительность:</strong>
+                            <p>2-3.5 года (в зависимости от профессии)</p>
+                        </div>
+
+                        <p><strong>Популярные направления:</strong></p>
+                        <ul>
+                            <li>Гостиничное дело и туризм</li>
+                            <li>Повар / кондитер</li>
+                            <li>Медицинский уход (Pflegefachkraft)</li>
+                            <li>IT-специалист</li>
+                            <li>Механик / электрик</li>
+                            <li>Логистика</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Зарплата во время обучения:</strong>
+                            <p>€800 - €1,300 в месяц (повышается каждый год обучения)</p>
+                        </div>
+
+                        <p><strong>Преимущества:</strong></p>
+                        <ul>
+                            <li>Бесплатное обучение</li>
+                            <li>Официальная зарплата с первого месяца</li>
+                            <li>Жильё (предоставляется или компенсируется)</li>
+                            <li>Полная медицинская страховка</li>
+                            <li>Возможность остаться работать после окончания</li>
+                            <li>Признанный во всей Европе диплом</li>
+                        </ul>
+
+                        <p><strong>Требования:</strong> возраст 18-35 лет, уровень немецкого B1-B2, мотивация к обучению.</p>
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('details2', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="service-image">
+                    <img src="../img/content/Изображение WhatsApp 2025-12-10 в 14.21.03_5041d462.jpg" alt="Ausbildung training program">
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 5: Blue Card -->
+        <div class="service-item">
+            <div class="service-content reverse">
+                <div class="service-text">
+                    <h3>Трудоустройство дипломированных специалистов (Blue Card)</h3>
+
+                    <div class="service-preview">
+                        <p>Помогаем признать диплом, найти работодателя и легально переехать в Германию.</p>
+                    </div>
+
+                    <div class="service-details" id="details-bluecard">
+                        <div class="highlight-box">
+                            <strong>Ключевые преимущества:</strong>
+                        </div>
+                        <ul>
+                            <li>Работа по специальности с официальным контрактом</li>
+                            <li>Сопровождение на всех этапах — от признания диплома до брони терминов</li>
+                            <li>Реальные работодатели в Германии</li>
+                            <li>Подготовка документов для визы</li>
+                            <li>Легальная миграция через программу Blue Card</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Кому подходит:</strong>
+                        </div>
+                        <ul>
+                            <li>Выпускники: технические, ИТ, медицина, инженерия</li>
+                            <li>Желателен опыт работы</li>
+                            <li>Английский или немецкий язык</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <strong>Что входит в услугу:</strong>
+                        </div>
+                        <ol>
+                            <li>Проверка диплома через ZAB / Anabin</li>
+                            <li>Поиск вакансий и согласование контракта</li>
+                            <li>Подготовка документов для визы</li>
+                            <li>Сопровождение до выезда и после прибытия</li>
+                        </ol>        
+                    </div>
+
+                    <button class="read-more-btn" onclick="toggleDetails('details-bluecard', this)">
+                        Подробнее
+                    </button>
+                </div>
+
+                <div class="service-image">
+                    <img src="../img/content/Изображение WhatsApp 2025-12-10 в 15.09.28_39de600b.jpg" alt="Blue Card Germany Work">
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra Services -->
+        <div class="extra-services">
+            <h3>Дополнительные услуги</h3>
+            <div class="extra-services-grid">
+                <div class="extra-card">
+                    <h4>📄 Перевод документов</h4>
+                    <p>Профессиональный перевод всех необходимых документов с нотариальным заверением</p>
+                </div>
+                <div class="extra-card">
+                    <h4>✈️ Визовая поддержка</h4>
+                    <p>Полное сопровождение при оформлении визы и подготовке документов</p>
+                </div>
+                <div class="extra-card">
+                    <h4>💬 Консультации</h4>
+                    <p>Бесплатные консультации по выбору программы и требованиям работодателя</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Контактная информация -->
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <p>г. Бишкек, ул. Бакаева 140/3<br>Главный офис</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <a href="tel:+996995660505">+996 995 660 505</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:bewerberweg@gmail.com">bewerberweg@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Рабочие часы -->
+            <div class="footer-section">
+                <h3>Режим работы</h3>
+                <p>Понедельник - Пятница:<br>9:00 - 18:00</p>
+                <p>Суббота:<br>Выходной</p>
+                <p>Воскресенье:<br>Выходной</p>
+            </div>
+
+            <!-- Быстрые ссылки -->
+            <div class="footer-section">
+                <h3>Быстрые ссылки</h3>
+                <a href="main.html">Главная</a>
+                <a href="services.html">Услуги</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+
+            <!-- Социальные сети -->
+            <div class="footer-section">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/weg.kg/" target="_blank">
+                        <img src="../img/icons8-instagram-48.png" class="social-link" title="Instagram">
+                    </a>
+                
+                
+                    <a href="https://wa.me/+996706660588" target="_blank">
+                        <img src="../img/icons8-whatsapp-48.png" class="social-link" title="WhatsApp">
+                    </a>
+                </div>
+                
+                <!-- Карта -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1390.649975307108!2d74.57691042369196!3d42.82892499765868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDLCsDQ5JzQ0LjEiTiA3NMKwMzQnMzkuNSJF!5e1!3m2!1sru!2skg!4v1765343163357!5m2!1sru!2skg" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe> 
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 WEG. Все права защищены. Лицензия №001550</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(detailsId, button) {
+            const details = document.getElementById(detailsId);
+            
+            if (details.classList.contains('active')) {
+                details.classList.remove('active');
+                button.textContent = 'Подробнее';
+            } else {
+                details.classList.add('active');
+                button.textContent = 'Скрыть';
+                
+                // Плавная прокрутка к началу раскрытого блока
+                setTimeout(() => {
+                    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        // Мобильное меню
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            
+            // Меняем иконку бургер-меню на крестик
+            if (navMenu.classList.contains('active')) {
+                mobileMenuBtn.textContent = '✕';
+            } else {
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+
+        // Закрытие меню при клике на ссылку
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+    </script>
+
+</body>
+</html>
