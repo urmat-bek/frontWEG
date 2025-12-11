@@ -1,139 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f5f5;
-    overflow-x: hidden;
-}
-
-/* ==================== HEADER & NAVBAR ==================== */
-.header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-    /* КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: отрицательный margin */
-    margin: -30px 0; /* Логотип выходит за пределы navbar на 15px сверху и снизу */
-}
-
-.logo:hover {
-    transform: scale(1.05);
-}
-
-/* СТИЛИ ДЛЯ ИЗОБРАЖЕНИЯ ЛОГОТИПА */
-.logo-img {
-    width: 130px;  /* Увеличенный размер логотипа */
-    height: 130px;
-    object-fit: contain;
-    display: block;
-}
-
-/* Если нужен текст рядом с логотипом */
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.logo-icon {
-    width: 70px;  /* Увеличено с 50px */
-    height: 70px;
-    background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.8rem; /* Увеличен шрифт */
-}
-
-.nav-menu {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    font-size: 1.05rem;
-    cursor: pointer;
-}
-
-.nav-menu a:hover {
-    color: #d24858;
-}
-
-.language-switcher {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 8px 15px;
-    border-radius: 8px;
-}
-
-.lang-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: 600;
-    color: #555;
-    transition: all 0.3s ease;
-}
-
-.lang-btn:hover {
-    background: white;
-    color: #d24858;
-}
-
-.lang-btn.active {
-    background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
-    color: white;
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #2c3e50;
-}
-
-
 /* ==================== HERO SECTION ==================== */
 .hero {
     background: linear-gradient(135deg, #d24858 0%, #764ba2 100%);
@@ -355,6 +219,11 @@ body {
     display: none;
 }
 
+/* ==================== SLIDER CONTROLS (скрыты по умолчанию) ==================== */
+.slider-controls {
+    display: none;
+}
+
 /* ==================== CTA SECTION ==================== */
 .cta-section {
     background: linear-gradient(135deg, #d24858 0%, #764ba2 100%);
@@ -393,192 +262,96 @@ body {
     transform: translateY(-3px);
 }
 
-/* ==================== FOOTER ==================== */
-.footer {
-    background: #1a1a1a;
-    color: white;
-    padding: 60px 40px 20px;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #d24858;
-}
-
-.footer-section p,
-.footer-section a {
-    color: #ccc;
-    line-height: 1.8;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: #d24858;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.contact-icon {
-    font-size: 1.3rem;
-    color: #d24858;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-link {
-    width: 45px;
-    height: 45px;
-    background: #2c3e50;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-link:hover {
-    background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
-    transform: translateY(-3px);
-}
-
-/* Map Section - ИСПРАВЛЕНО */
-.map-container {
-    border-radius: 12px;
-    overflow: hidden;
-    height: 300px; /* Увеличена высота */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    margin-top: 15px;
-    position: relative; /* Добавлено */
-}
-
-/* КРИТИЧЕСКИ ВАЖНО - стили для iframe */
-.map-container iframe {
-    width: 100% !important;
-    height: 100% !important;
-    border: 0;
-    display: block;
-}
-
-.footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 30px;
-    text-align: center;
-    color: #888;
-}
-/* ==================== RESPONSIVE ==================== */
-
-/* Планшеты (768px - 1024px) */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 20px 30px;
+/* ==================== MOBILE SLIDER (768px и меньше) ==================== */
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 0 20px;
+        position: relative;
     }
 
-    .nav-menu {
-        gap: 25px;
+    .reviews-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding: 20px 0;
+        
+        /* Скрыть скроллбар */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .main-content {
-        padding: 0 30px;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .timeline-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .timeline-item::before {
+    .reviews-grid::-webkit-scrollbar {
         display: none;
     }
-}
 
-/* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
+    .review-card {
+        min-width: 320px;
+        max-width: 320px;
+        scroll-snap-align: center;
+        flex-shrink: 0;
     }
 
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .logo-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.2rem;
-    }
-    .logo-img {
-        width: 45px;  /* Меньше на мобильных */
-        height: 45px;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background: white;
-        width: 100%;
-        padding: 30px;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.1);
-        transition: left 0.3s ease;
+    /* Показываем кнопки управления слайдером */
+    .slider-controls {
+        display: flex;
+        justify-content: center;
         gap: 20px;
-        align-items: flex-start;
+        margin-top: 30px;
+        padding: 0 20px;
     }
 
-    .nav-menu.active {
-        left: 0;
+    .slider-btn {
+        width: 55px;
+        height: 55px;
+        background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(210, 72, 88, 0.4);
+        transition: all 0.3s ease;
     }
 
-    .mobile-menu-btn {
-        display: block;
+    .slider-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 25px rgba(210, 72, 88, 0.5);
     }
 
-    .language-switcher {
+    .slider-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 10px rgba(210, 72, 88, 0.3);
+    }
+
+    /* Индикаторы слайдов */
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
         margin-top: 20px;
     }
 
-    .hero {
-        padding: 60px 20px;
+    .slider-dot {
+        width: 10px;
+        height: 10px;
+        background: #ddd;
+        border-radius: 50%;
+        transition: all 0.3s ease;
     }
 
+    .slider-dot.active {
+        background: #d24858;
+        width: 30px;
+        border-radius: 5px;
+    }
+
+    /* Hero адаптация */
     .hero h1 {
         font-size: 2rem;
     }
@@ -587,73 +360,34 @@ body {
         font-size: 1rem;
     }
 
-    .cta-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-
-    .main-content {
-        margin: 40px auto;
+    /* Statistics адаптация */
+    .statistics {
         padding: 0 20px;
+        margin: -30px auto 40px;
     }
 
-    .section {
-        margin-bottom: 50px;
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
+    .stat-card {
+        padding: 20px 15px;
     }
 
-    .info-cards {
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .stat-number {
+        font-size: 2rem;
     }
 
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .language-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        padding: 40px 20px 20px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .map-container {
-        height: 200px;
+    .stat-label {
+        font-size: 0.95rem;
     }
 }
 
-/* Маленькие телефоны (до 480px) */
+/* ==================== EXTRA SMALL PHONES (480px и меньше) ==================== */
 @media (max-width: 480px) {
-    .navbar {
-        padding: 12px 15px;
-    }
-
-    .logo {
-        font-size: 1.3rem;
-    }
-    .logo-img {
-        width: 60px;  /* Еще меньше */
-        height: 60px;
-    }
-
-    .logo-text {
-        font-size: 1.1rem;
+    .hero {
+        padding: 60px 20px 40px;
     }
 
     .hero h1 {
@@ -664,26 +398,24 @@ body {
         font-size: 0.95rem;
     }
 
-    .btn-primary, .btn-secondary {
-        padding: 12px 25px;
+    .review-card {
+        min-width: 90%;
+        padding: 25px 20px;
+    }
+
+    .review-text {
         font-size: 1rem;
     }
 
-    .section-title {
-        font-size: 1.5rem;
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 
-    .info-card {
-        padding: 30px 20px;
+    .cta-section h2 {
+        font-size: 1.8rem;
     }
 
-    .timeline-number {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
-
-    .social-links {
-        justify-content: center;
+    .cta-section p {
+        font-size: 1rem;
     }
 }
