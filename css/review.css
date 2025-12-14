@@ -105,16 +105,49 @@
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    justify-items: center;
 }
 
+/* Когда 1 отзыв - центрируем и ограничиваем ширину */
+.reviews-grid .review-card:only-child {
+    max-width: 500px;
+    width: 100%;
+    grid-column: 2 / 3;
+    justify-self: center;
+}
+
+/* Когда 2 отзыва - центрируем */
+.reviews-grid .review-card:first-child:nth-last-child(2),
+.reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card {
+    max-width: 500px;
+    width: 100%;
+}
+
+.reviews-grid .review-card:first-child:nth-last-child(2) {
+    grid-column: 1 / 2;
+}
+
+.reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card:nth-child(2) {
+    grid-column: 2 / 3;
+}
+
+/* Когда 3 отзыва - все по равной ширине */
+.reviews-grid .review-card:first-child:nth-last-child(3),
+.reviews-grid .review-card:first-child:nth-last-child(3) ~ .review-card {
+    max-width: none;
+    width: 100%;
+}
+
+/* Когда 4+ отзывов - 3 в ряд, 4-й переносится */
 .review-card {
     background: white;
     padding: 35px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 .review-card:hover {
@@ -179,23 +212,28 @@
     margin-top: 5px;
 }
 
+/* ==================== VIDEO CONTAINER ==================== */
 .review-video-container {
     position: relative;
     width: 100%;
+    height: 400px;
+    background: #000;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 20px;
-    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .review-video {
     width: 100%;
-    height: auto;
-    max-height: 400px;
+    height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
+/* Play overlay */
 .video-play-overlay {
     position: absolute;
     top: 50%;
@@ -203,20 +241,167 @@
     transform: translate(-50%, -50%);
     pointer-events: none;
     opacity: 0.9;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .review-video-container:hover .video-play-overlay {
     opacity: 1;
-}
-
-.review-video:not([controls])::-webkit-media-controls {
-    display: none;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 /* Скрыть overlay когда видео играет */
-.review-video[playing] ~ .video-play-overlay {
+.review-video-container.playing .video-play-overlay {
     display: none;
+}
+
+/* ==================== КАСТОМНЫЕ КОНТРОЛЫ В СТИЛЕ YOUTUBE ==================== */
+.custom-video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.review-video-container:hover .custom-video-controls,
+.review-video-container.playing .custom-video-controls {
+    opacity: 1;
+}
+
+/* Прогресс бар */
+.video-progress-area {
+    padding: 0 12px;
+    cursor: pointer;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.video-progress-area:hover .video-progress-bar {
+    height: 5px;
+}
+
+.video-progress-area:hover .video-progress-handle {
+    opacity: 1;
+}
+
+.video-progress-bar {
+    width: 100%;
+    height: 3px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    position: relative;
+    transition: height 0.1s ease;
+}
+
+.video-progress-filled {
+    height: 100%;
+    background: #d24858;
+    width: 0%;
+    border-radius: 2px;
+    position: relative;
+}
+
+.video-progress-handle {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background: #d24858;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    pointer-events: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Нижние контролы */
+.video-controls-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px 12px;
+    color: white;
+}
+
+.controls-left,
+.controls-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.video-control-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+    opacity: 0.9;
+}
+
+.video-control-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.video-control-btn svg {
+    display: block;
+}
+
+/* Слайдер громкости */
+.video-volume-slider {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.volume-range {
+    width: 60px;
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-range::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.video-time {
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 500;
+    user-select: none;
 }
 
 /* ==================== SLIDER CONTROLS (скрыты по умолчанию) ==================== */
@@ -262,6 +447,31 @@
     transform: translateY(-3px);
 }
 
+/* ==================== TABLET (768px - 1024px) ==================== */
+@media (max-width: 1024px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    /* На планшете все отзывы занимают половину ширины */
+    .reviews-grid .review-card:only-child,
+    .reviews-grid .review-card:first-child:nth-last-child(2),
+    .reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card,
+    .reviews-grid .review-card:first-child:nth-last-child(3),
+    .reviews-grid .review-card:first-child:nth-last-child(3) ~ .review-card {
+        max-width: none;
+        grid-column: auto;
+    }
+    
+    /* Один отзыв центрируем */
+    .reviews-grid .review-card:only-child {
+        grid-column: 1 / -1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
 /* ==================== MOBILE SLIDER (768px и меньше) ==================== */
 @media (max-width: 768px) {
     .reviews-section {
@@ -291,6 +501,12 @@
         max-width: 320px;
         scroll-snap-align: center;
         flex-shrink: 0;
+        padding: 25px;
+    }
+
+    /* Видео на мобильных */
+    .review-video-container {
+        height: 350px;
     }
 
     /* Показываем кнопки управления слайдером */
@@ -400,11 +616,16 @@
 
     .review-card {
         min-width: 90%;
-        padding: 25px 20px;
+        padding: 20px 15px;
     }
 
     .review-text {
         font-size: 1rem;
+    }
+    
+    /* Видео на маленьких экранах */
+    .review-video-container {
+        height: 300px;
     }
 
     .stats-grid {

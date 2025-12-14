@@ -1,0 +1,139 @@
+.error-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #d24858 0%, #764ba2 100%);
+    padding: 80px 20px 40px;
+}
+
+.error-content {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 20px;
+    animation: glitch 2s ease-in-out infinite;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+}
+
+.error-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.error-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.error-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error-btn {
+    padding: 15px 40px;
+    border: 2px solid white;
+    background: white;
+    color: #d24858;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.error-btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.error-btn.secondary {
+    background: transparent;
+    color: white;
+}
+
+.error-btn.secondary:hover {
+    background: white;
+    color: #d24858;
+}
+
+.error-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+}
+
+.error-info {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.error-info p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.error-info strong {
+    color: #fff;
+}
+
+.error-info a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 6rem;
+    }
+
+    .error-title {
+        font-size: 1.8rem;
+    }
+
+    .error-description {
+        font-size: 1rem;
+    }
+
+    .error-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

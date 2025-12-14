@@ -466,66 +466,7 @@
             <p>&copy; 2025 WEG. Все права защищены. Лицензия №001550</p>
         </div>
     </footer>
-
-    <script>
-        function toggleDetails(detailsId, button) {
-            const details = document.getElementById(detailsId);
-            
-            if (details.classList.contains('active')) {
-                details.classList.remove('active');
-                button.textContent = 'Подробнее';
-            } else {
-                details.classList.add('active');
-                button.textContent = 'Скрыть';
-                
-                setTimeout(() => {
-                    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 100);
-            }
-        }
-    </script>
-
-<script>
-    // Page navigation
-    function showPage(pageId) {
-        // Hide all pages
-        document.querySelectorAll('.page').forEach(page => {
-            page.classList.remove('active');
-        });
-        
-        // Show selected page
-        document.getElementById(pageId).classList.add('active');
-        
-        // Close mobile menu if open
-        const navMenu = document.getElementById('navMenu');
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        navMenu.classList.remove('active');
-        mobileMenuBtn.textContent = '☰';
-        
-        // Scroll to top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
-    });
-
-    // Language switcher
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const lang = btn.dataset.lang;
-            console.log('Language switched to:', lang);
-            // Здесь можно добавить логику смены языка
-        });
-    });
-</script>
+    <script src="../js/toggleDetails.js"></script>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>

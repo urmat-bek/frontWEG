@@ -172,3 +172,21 @@ window.addEventListener('resize', () => {
     document.querySelectorAll('.slider-controls, .slider-dots').forEach(el => el.remove());
     initReviewsSlider();
 });
+
+// для видео
+    // Скрыть overlay при воспроизведении
+    document.querySelectorAll('.review-video').forEach(video => {
+        video.addEventListener('play', function() {
+            this.setAttribute('playing', '');
+            const overlay = this.parentElement.querySelector('.video-play-overlay');
+            if (overlay) overlay.style.display = 'none';
+        });
+        
+        video.addEventListener('pause', function() {
+            this.removeAttribute('playing');
+            const overlay = this.parentElement.querySelector('.video-play-overlay');
+            if (overlay) overlay.style.display = 'block';
+        });
+    });
+
+
