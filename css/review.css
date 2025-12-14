@@ -64,38 +64,6 @@
     font-size: 1.1rem;
 }
 
-/* ==================== FILTER ==================== */
-.filter-section {
-    max-width: 1400px;
-    margin: 0 auto 50px;
-    padding: 0 40px;
-}
-
-.filter-buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 12px 30px;
-    border: 2px solid #d24858;
-    background: white;
-    color: #d24858;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: linear-gradient(135deg, #d24858 0%, #ba4050 100%);
-    color: white;
-}
-
 /* ==================== REVIEWS ==================== */
 .reviews-section {
     max-width: 1400px;
@@ -110,44 +78,17 @@
     justify-items: center;
 }
 
-/* Когда 1 отзыв - центрируем и ограничиваем ширину */
-.reviews-grid .review-card:only-child {
-    max-width: 500px;
-    width: 100%;
-    grid-column: 2 / 3;
-    justify-self: center;
-}
-
-/* Когда 2 отзыва - центрируем */
-.reviews-grid .review-card:first-child:nth-last-child(2),
-.reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card {
-    max-width: 500px;
-    width: 100%;
-}
-
-.reviews-grid .review-card:first-child:nth-last-child(2) {
-    grid-column: 1 / 2;
-}
-
-.reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card:nth-child(2) {
-    grid-column: 2 / 3;
-}
-
-/* Когда 3 отзыва - все по равной ширине */
-.reviews-grid .review-card:first-child:nth-last-child(3),
-.reviews-grid .review-card:first-child:nth-last-child(3) ~ .review-card {
-    max-width: none;
-    width: 100%;
-}
-
-/* Когда 4+ отзывов - 3 в ряд, 4-й переносится */
+/* Карточка отзыва - фиксированная ширина */
 .review-card {
     background: white;
-    padding: 35px;
+    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    max-width: 420px;
 }
 
 .review-card:hover {
@@ -155,31 +96,43 @@
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
-.review-stars {
-    color: #ffd700;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+/* 1 отзыв - центрируем */
+.reviews-grid .review-card:only-child {
+    grid-column: 2 / 3;
 }
 
-.review-text {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    font-style: italic;
-    font-size: 1.05rem;
+/* 2 отзыва - центрируем оба */
+.reviews-grid .review-card:first-child:nth-last-child(2) {
+    grid-column: 1 / 2;
+    justify-self: end;
 }
 
+.reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card {
+    grid-column: 2 / 3;
+    justify-self: start;
+}
+
+/* 3 отзыва - заполняем всю ширину */
+.reviews-grid .review-card:first-child:nth-last-child(3),
+.reviews-grid .review-card:first-child:nth-last-child(3) ~ .review-card {
+    max-width: none;
+}
+
+/* 4+ отзывов - стандартная сетка 3 колонки */
+
+/* Автор - сверху */
 .review-author {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
 }
 
 .review-avatar {
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, #da6473 0%, #ba4050 100%);
     border-radius: 50%;
     display: flex;
@@ -187,43 +140,42 @@
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
 }
 
 .review-info h5 {
     color: #2c3e50;
-    margin-bottom: 5px;
+    margin: 0 0 5px 0;
     font-size: 1.1rem;
 }
 
 .review-info p {
     color: #888;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin: 0 0 8px 0;
 }
 
 .review-tag {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 4px 10px;
     background: #f0f0f0;
     border-radius: 5px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #d24858;
-    margin-top: 5px;
+    font-weight: 600;
 }
 
-/* ==================== VIDEO CONTAINER ==================== */
+/* Видео контейнер */
 .review-video-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    aspect-ratio: 9/16;
+    max-height: 500px;
     background: #000;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .review-video {
@@ -233,7 +185,6 @@
     object-fit: contain;
 }
 
-/* Play overlay */
 .video-play-overlay {
     position: absolute;
     top: 50%;
@@ -250,163 +201,16 @@
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Скрыть overlay когда видео играет */
 .review-video-container.playing .video-play-overlay {
     display: none;
 }
 
-/* ==================== КАСТОМНЫЕ КОНТРОЛЫ В СТИЛЕ YOUTUBE ==================== */
-.custom-video-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 70%, transparent 100%);
-    padding: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-}
-
-.review-video-container:hover .custom-video-controls,
-.review-video-container.playing .custom-video-controls {
-    opacity: 1;
-}
-
-/* Прогресс бар */
-.video-progress-area {
-    padding: 0 12px;
-    cursor: pointer;
-    height: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.video-progress-area:hover .video-progress-bar {
-    height: 5px;
-}
-
-.video-progress-area:hover .video-progress-handle {
-    opacity: 1;
-}
-
-.video-progress-bar {
-    width: 100%;
-    height: 3px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 2px;
-    position: relative;
-    transition: height 0.1s ease;
-}
-
-.video-progress-filled {
-    height: 100%;
-    background: #d24858;
-    width: 0%;
-    border-radius: 2px;
-    position: relative;
-}
-
-.video-progress-handle {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 14px;
-    height: 14px;
-    background: #d24858;
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.1s ease;
-    pointer-events: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-/* Нижние контролы */
-.video-controls-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 12px 12px;
-    color: white;
-}
-
-.controls-left,
-.controls-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.video-control-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.1s ease, opacity 0.2s ease;
-    opacity: 0.9;
-}
-
-.video-control-btn:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.video-control-btn svg {
-    display: block;
-}
-
-/* Слайдер громкости */
-.video-volume-slider {
-    width: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: width 0.3s ease, opacity 0.3s ease;
-}
-
-.volume-range {
-    width: 60px;
-    height: 3px;
-    -webkit-appearance: none;
-    appearance: none;
-    background: rgba(255,255,255,0.3);
-    border-radius: 2px;
-    outline: none;
-    cursor: pointer;
-}
-
-.volume-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.volume-range::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
-
-.video-time {
-    font-size: 0.85rem;
-    color: white;
-    font-weight: 500;
-    user-select: none;
-}
-
-/* ==================== SLIDER CONTROLS (скрыты по умолчанию) ==================== */
-.slider-controls {
-    display: none;
+/* Текст отзыва */
+.review-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 /* ==================== CTA SECTION ==================== */
@@ -447,6 +251,11 @@
     transform: translateY(-3px);
 }
 
+/* ==================== SLIDER CONTROLS (скрыты по умолчанию) ==================== */
+.slider-controls {
+    display: none;
+}
+
 /* ==================== TABLET (768px - 1024px) ==================== */
 @media (max-width: 1024px) {
     .reviews-grid {
@@ -454,21 +263,30 @@
         gap: 25px;
     }
     
-    /* На планшете все отзывы занимают половину ширины */
-    .reviews-grid .review-card:only-child,
+    .review-card {
+        max-width: 450px;
+    }
+    
+    /* 1 отзыв - центрируем */
+    .reviews-grid .review-card:only-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 420px;
+    }
+    
+    /* 2 отзыва - нормально в 2 колонки */
     .reviews-grid .review-card:first-child:nth-last-child(2),
-    .reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card,
+    .reviews-grid .review-card:first-child:nth-last-child(2) ~ .review-card {
+        grid-column: auto;
+        justify-self: center;
+        max-width: 420px;
+    }
+    
+    /* 3+ отзыва - по 2 в ряд */
     .reviews-grid .review-card:first-child:nth-last-child(3),
     .reviews-grid .review-card:first-child:nth-last-child(3) ~ .review-card {
         max-width: none;
-        grid-column: auto;
-    }
-    
-    /* Один отзыв центрируем */
-    .reviews-grid .review-card:only-child {
-        grid-column: 1 / -1;
-        max-width: 600px;
-        margin: 0 auto;
+        justify-self: stretch;
     }
 }
 
@@ -486,8 +304,6 @@
         scroll-behavior: smooth;
         gap: 20px;
         padding: 20px 0;
-        
-        /* Скрыть скроллбар */
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
@@ -501,12 +317,11 @@
         max-width: 320px;
         scroll-snap-align: center;
         flex-shrink: 0;
-        padding: 25px;
+        padding: 20px;
     }
 
-    /* Видео на мобильных */
     .review-video-container {
-        height: 350px;
+        max-height: 400px;
     }
 
     /* Показываем кнопки управления слайдером */
@@ -545,7 +360,6 @@
         box-shadow: 0 2px 10px rgba(210, 72, 88, 0.3);
     }
 
-    /* Индикаторы слайдов */
     .slider-dots {
         display: flex;
         justify-content: center;
@@ -567,7 +381,6 @@
         border-radius: 5px;
     }
 
-    /* Hero адаптация */
     .hero h1 {
         font-size: 2rem;
     }
@@ -576,7 +389,6 @@
         font-size: 1rem;
     }
 
-    /* Statistics адаптация */
     .statistics {
         padding: 0 20px;
         margin: -30px auto 40px;
@@ -616,16 +428,16 @@
 
     .review-card {
         min-width: 90%;
-        padding: 20px 15px;
+        max-width: 90%;
+        padding: 18px;
     }
 
     .review-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
-    /* Видео на маленьких экранах */
     .review-video-container {
-        height: 300px;
+        max-height: 350px;
     }
 
     .stats-grid {
