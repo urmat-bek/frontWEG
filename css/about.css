@@ -331,11 +331,13 @@
     margin-top: 25px;
 }
 
+/* ==================== DESKTOP GRID (по умолчанию) ==================== */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 50px;
+    justify-items: center;
 }
 
 .team-card {
@@ -346,6 +348,7 @@
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     animation: fadeInUp 0.6s ease backwards;
+    width: 100%;
 }
 
 .team-card:hover {
@@ -357,6 +360,33 @@
 .team-card:nth-child(2) { animation-delay: 0.2s; }
 .team-card:nth-child(3) { animation-delay: 0.3s; }
 .team-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Когда 1 карточка - центрируем и ограничиваем ширину */
+.team-grid .team-card:only-child {
+    max-width: 400px;
+    width: 100%;
+    grid-column: 2 / 3;
+    justify-self: center;
+}
+
+/* Когда 2 карточки - центрируем обе */
+.team-grid .team-card:first-child:nth-last-child(2) {
+    grid-column: 1 / 2;
+    max-width: 400px;
+    width: 100%;
+}
+
+.team-grid .team-card:first-child:nth-last-child(2) ~ .team-card:nth-child(2) {
+    grid-column: 2 / 3;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Когда 3+ карточек - все на равной ширине (сбрасываем max-width) */
+.team-grid .team-card:first-child:nth-last-child(n+3),
+.team-grid .team-card:first-child:nth-last-child(n+3) ~ .team-card {
+    max-width: none;
+}
 
 .team-card-inner {
     position: relative;
@@ -470,8 +500,39 @@
     line-height: 1.6;
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
+/* ==================== TABLET (до 1024px) ==================== */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    /* Одна карточка - меньше и по центру */
+    .team-grid .team-card:only-child {
+        grid-column: 1 / -1 !important;
+        max-width: 350px !important;
+        margin: 0 auto;
+    }
+    
+    /* Две карточки - занимают всю ширину поровну */
+    .team-grid .team-card:first-child:nth-last-child(2),
+    .team-grid .team-card:first-child:nth-last-child(2) ~ .team-card {
+        max-width: none !important;
+        grid-column: auto !important;
+        width: 100% !important;
+    }
+    
+    /* Три и более карточек - по 2 в ряд */
+    .team-grid .team-card:first-child:nth-last-child(n+3),
+    .team-grid .team-card:first-child:nth-last-child(n+3) ~ .team-card {
+        max-width: none !important;
+        grid-column: auto !important;
+        width: 100% !important;
+    }
+}
+
+/* ==================== MOBILE (до 768px) ==================== */
+@media (max-width: 640px) {
     .section-content,
     .section-content.reverse {
         flex-direction: column;
@@ -502,8 +563,19 @@
     }
 
     .team-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 30px;
+    }
+    
+    /* На мобильных сбрасываем ВСЕ специальные правила */
+    .team-grid .team-card:only-child,
+    .team-grid .team-card:first-child:nth-last-child(2),
+    .team-grid .team-card:first-child:nth-last-child(2) ~ .team-card,
+    .team-grid .team-card:first-child:nth-last-child(n+3),
+    .team-grid .team-card:first-child:nth-last-child(n+3) ~ .team-card {
+        max-width: none !important;
+        grid-column: auto !important;
+        width: 100% !important;
     }
 
     .team-photo {
@@ -511,6 +583,7 @@
     }
 }
 
+/* ==================== SMALL MOBILE (до 640px) ==================== */
 @media (max-width: 640px) {
     .license-section {
         padding: 32px 24px;
