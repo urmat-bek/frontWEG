@@ -469,6 +469,25 @@
     transform: translateY(-3px);
 }
 
+/* ==================== REVIEWS - FIXES ==================== */
+.review-card > *:not(:first-child) {
+    margin-top: 15px;
+}
+
+.review-tag {
+    margin-top: 8px !important;
+    display: inline-block;
+}
+
+.review-stars {
+    margin-top: 10px !important;
+}
+
+.review-video-container,
+.review-image-container {
+    margin-top: 20px !important;
+}
+
 /* ==================== TABLET (768px - 1024px) ==================== */
 @media (max-width: 1024px) {
     .reviews-grid {
